@@ -19,5 +19,9 @@ export class ShowsService {
     return this.http.get(this.showsUrl)    
   }
 
+  getShowInfo(id): Observable<any> {
+    return this.http.get(`${this.showsUrl}/${id}`)
+  }
+
   
 }
