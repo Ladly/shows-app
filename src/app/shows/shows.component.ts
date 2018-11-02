@@ -9,13 +9,14 @@ import { ShowsService } from '../services/shows.service'
 })
 export class ShowsComponent implements OnInit {
 
+  title = 'Popular shows';
   shows: any = []
 
   constructor(private showService: ShowsService) { }
 
   getShows(): void {
     this.showService.getShows()
-      .subscribe(shows => this.shows = shows)
+      .subscribe(shows => this.shows = shows.slice(0, 49))
       
   }
 
