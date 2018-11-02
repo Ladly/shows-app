@@ -1,5 +1,23 @@
 <div class="container" *ngIf="show.name">
-  <h1 class="text-center">{{show.name}}</h1>
-  <img class="rounded mx-auto d-block" src="{{show.image.medium}}" alt="details">
-  <div [innerHTML]="show.summary"></div>
+	<div class="akas text-center">
+		<h1>{{show.name}}</h1>
+		<h5>Akas: </h5>
+		<p *ngFor="let aka of show._embedded.akas | slice:0:3 ">{{aka.country.name}}- {{aka.name}} </p>
+	</div>
+	<section class="details row">
+		<img class="rounded mx-auto d-block col-sm-12 col-md-6 col-lg-4" src="{{show.image.medium}}" alt="details">
+		<div class="col-sm-12 col-md-6 col-lg-4 text-center">
+			<h4>Seasons</h4>
+			<ul>
+				<li *ngFor="let season of show._embedded.seasons">{{season.premiereDate}}- {{season.endDate}}</li>
+			</ul>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-4 text-center">
+			<h4>Cast</h4>
+			<ul>
+				<li *ngFor="let cast of show._embedded.cast">{{cast.person.name}}</li>
+			</ul>
+		</div>
+		<div class="col-md-6 col-lg-12" [innerHTML]="show.summary"></div>
+	</section>
 </div>

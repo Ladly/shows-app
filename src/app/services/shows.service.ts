@@ -20,7 +20,7 @@ export class ShowsService {
   }
 
   getShowInfo(id): Observable<any> {
-    return this.http.get(`${this.showsUrl}/${id}`)
+    return this.http.get(`${this.showsUrl}/${id}?embed[]=seasons&embed[]=akas&embed[]=cast`)
   }
 
   

@@ -1,3 +1,28 @@
+h1 {
+    margin: .5em 0;
+}
+
+.akas {
+    margin-bottom: 2em;
+}
+
+.akas p {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+ul {
+    margin: 0;
+    padding: 1em 0;
+    list-style-type: none;
+}
+
 img {
-    margin: 1em 0;
+   height: 100%; 
+   margin-bottom: 1em;
 }
