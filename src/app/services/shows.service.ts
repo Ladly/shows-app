@@ -13,7 +13,7 @@ export class ShowsService {
 
   constructor(private http: HttpClient) { }
 
-  private showsUrl = 'http://api.tvmaze.com/shows'
+  private showsUrl = 'https://cors-anywhere.herokuapp.com/http://api.tvmaze.com/shows'
 
   getShows(): Observable<any> {
     return this.http.get(this.showsUrl)    
