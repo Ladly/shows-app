@@ -1,0 +1,10 @@
+<input 
+  [(ngModel)]="inputValue" 
+  type="text" 
+  class="form-control form-control-sm" 
+  placeholder="Search show..."
+  (keyup) = "changeInputValue($event)"
+  >
+<ul *ngIf="searchResults">
+  <li *ngFor="let show of searchResults" ><a routerLink="/showinfo/{{show.show.id}}" (click)=clearInputValue($event)>{{show.show.name}}</a></li>  
+</ul>

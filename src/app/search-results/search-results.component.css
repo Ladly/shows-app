@@ -1,0 +1,16 @@
+ul {
+    position: absolute;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    background-color: white
+}
+
+li {
+    padding: .5em;
+    border-bottom: 1px solid black; 
+}
+
+a {
+    color: black;
+}

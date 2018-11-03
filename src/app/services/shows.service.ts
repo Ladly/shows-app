@@ -14,6 +14,7 @@ export class ShowsService {
   constructor(private http: HttpClient) { }
 
   private showsUrl = 'https://cors-anywhere.herokuapp.com/http://api.tvmaze.com/shows'
+  private showSearchUrl = 'https://cors-anywhere.herokuapp.com/http://api.tvmaze.com/search/shows?q='
 
   getShows(): Observable<any> {
     return this.http.get(this.showsUrl)    
@@ -21,6 +22,10 @@ export class ShowsService {
 
   getShowInfo(id): Observable<any> {
     return this.http.get(`${this.showsUrl}/${id}?embed[]=seasons&embed[]=akas&embed[]=cast`)
+  }
+
+  searchShow(query): Observable<any> {
+    return this.http.get(`${this.showSearchUrl}${query}`)
   }
 
   

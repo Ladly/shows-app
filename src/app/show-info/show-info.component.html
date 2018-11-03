@@ -9,13 +9,13 @@
 		<div class="col-sm-12 col-md-6 col-lg-4 text-center">
 			<h4>Seasons</h4>
 			<ul>
-				<li *ngFor="let season of show._embedded.seasons">{{season.premiereDate}}- {{season.endDate}}</li>
+				<li *ngFor="let season of show._embedded.seasons | slice:0:10">{{season.premiereDate}}- {{season.endDate}}</li>
 			</ul>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-4 text-center">
 			<h4>Cast</h4>
 			<ul>
-				<li *ngFor="let cast of show._embedded.cast">{{cast.person.name}}</li>
+				<li *ngFor="let cast of show._embedded.cast | slice:0:15">{{cast.person.name}}</li>
 			</ul>
 		</div>
 		<div class="col-md-6 col-lg-12" [innerHTML]="show.summary"></div>
