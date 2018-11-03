@@ -20,11 +20,9 @@ This project is created for practice purpose and like that it is suitable to be 
 
 Endpoint used is tvmaze:
 
-- [Documentation][http://api.tvmaze.com/api]
+- [Documentation][http://api.tvmaze.com]
 
 - http://api.tvmaze.com/shows
-
-- [tvmaze website](http://api.tvmaze.com)
 
 Important to notice: this api is served on http so gh pages will not display it directly. I used [cors-anywhere](https://cors-anywhere.herokuapp.com/) to display data.
 
