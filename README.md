@@ -1,27 +1,45 @@
 # ShowsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+Application that displays popular TV Shows as well as details of it.
 
-## Development server
+[Link to app](https://ladly.github.io/shows-app/)
+
+## Getting started
+
+Clone repo: git clone https://github.com/Ladly/shows-app.git.
+
+Install dependencies: run `yarn/npm install`.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+For deployment on gh-pages to see search input go to: src/app/navigation/navigation.component.html and change currentLocation === '/' to currentLocation === '/shows-app/' 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Infrastructure decisions and limitations
 
-## Build
+This project is created for practice purpose and like that it is suitable to be hosted on gh pages.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Endpoint used is tvmaze:
 
-## Running unit tests
+- [Documentation][http://api.tvmaze.com/api]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- http://api.tvmaze.com/shows
 
-## Running end-to-end tests
+- [tvmaze website](http://api.tvmaze.com)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Important to notice: this api is served on http so gh pages will not display it directly. I used [cors-anywhere](https://cors-anywhere.herokuapp.com/) to display data.
 
-## Further help
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+More details about project progress can be found on trello link below.
+
+## Project management
+
+I use [trello](https://trello.com/b/Tefvejua).
+
+## Authors
+
+[Vuk Ivanovic](https://www.linkedin.com/in/vuk-ivanovic/).
+
+## Licence
+
+This project is licensed under MIT licence
