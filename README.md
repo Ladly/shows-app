@@ -20,7 +20,7 @@ This project is created for practice purpose and like that it is suitable to be 
 
 Endpoint used is tvmaze:
 
-- [Documentation][http://api.tvmaze.com]
+- [Documentation](http://api.tvmaze.com)
 
 - http://api.tvmaze.com/shows
 
